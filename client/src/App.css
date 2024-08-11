@@ -1,0 +1,50 @@
+ /* links for google fonts */
+ @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,400&display=swap');
+ .app{
+  background-color: rgb(232, 232, 246);
+  padding-bottom: 20px;
+  background-image: linear-gradient(to right ,rgb(217, 235, 242), rgb(178, 213, 226));
+text-align: center;
+}
+body{
+  max-width:100%;
+  height: auto;
+  margin: 20px 20px ;
+  padding: 20px 20px;
+}
+form input {
+  /* background-color: dodgerblue; */
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+form label {
+  display: block;
+  margin-bottom: 4px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(13, 12, 12);
+  font-family: "Fira Sans", sans-serif;
+  
+}
+
+form {
+  padding: 20px 20px;
+  background-color: rgb(195, 210, 230);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.logout {
+ background-color: rgb(124, 149, 226);
+ float: right;
+ border-radius: 4px;
+} 
