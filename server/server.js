@@ -27,7 +27,9 @@ app.use(cors());
  //      next();
  //    });
 app.use(express.json());
-
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 app.use('/api/auth', require('./routes/user_routes'));
 
 app.listen(PORT,()=>{
