@@ -29,10 +29,24 @@ app.use(cors());
  //      next();
  //    });
 app.use(express.json());
+<<<<<<< HEAD
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+=======
+app.use(express.static(path.join(__dirname, '../')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+// <<<<<<< HEAD
+// =======
+// // app.get('/', (req, res) => {
+// //   res.send('Hello World!')
+// // })
+// >>>>>>> 0677cf8f65c49aa4d9bcae45936b39ecb48967af
+>>>>>>> 46d78799a37fb832ab942b479e6d98221efdfb76
 app.use('/api/auth', require('./routes/user_routes'));
 
 app.listen(PORT,()=>{
