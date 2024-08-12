@@ -19,6 +19,7 @@ app.use(cors());
 //         credentials: true
 //     }
 // ));
+
  // app.use(function (req, res, next) {
  //    //Enabling CORS
  //    res.header("Access-Control-Allow-Origin", "*");
@@ -33,6 +34,12 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+<<<<<<< HEAD
+=======
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
+>>>>>>> 0677cf8f65c49aa4d9bcae45936b39ecb48967af
 app.use('/api/auth', require('./routes/user_routes'));
 
 app.listen(PORT,()=>{
