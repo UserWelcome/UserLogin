@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGO_URL)
 app.use(cors());
 app.use(cors(
     {
-        origin: ["https://userlogin-b8yq.onrender.com","localhost:3000"],
+        origin: ["https://userlogin-b8yq.onrender.com","localhost:4000"],
         methods: ["POST", "GET"],
         credentials: true
     }
