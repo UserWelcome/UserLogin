@@ -4,6 +4,9 @@ const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 dotenv.config();
 
+const getHome = async (req, res) => {
+    res.send("GET Request Called")
+};
 const register = async (req, res) => {
     console.log('signup')
     const { userName, email, password } = req.body;
@@ -48,4 +51,4 @@ const login = async (req,res) => {
 
 };
 
-module.exports = { register, login };
+module.exports = { register, login  ,getHome};
