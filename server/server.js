@@ -12,13 +12,13 @@ mongoose.connect(process.env.MONGO_URL)
 
 //middleware
 app.use(cors());
-// app.use(cors(
-//     {
-//         origin: ["https://userlogin-b8yq.onrender.com"],
-//         methods: ["POST", "GET"],
-//         credentials: true
-//     }
-// ));
+app.use(cors(
+    {
+        origin: ["https://userlogin-b8yq.onrender.com"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
  // app.use(function (req, res, next) {
  //    //Enabling CORS
