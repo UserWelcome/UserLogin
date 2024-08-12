@@ -4,6 +4,7 @@ const cors= require('cors');
 require('dotenv').config();
 const app = express();
 const PORT=process.env.PORT;
+const path = require('path'); 
 
 mongoose.connect(process.env.MONGO_URL)
 .then(()=> console.log('Connected to DB'))
@@ -27,7 +28,11 @@ app.use(cors());
  //      next();
  //    });
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'build')));
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 app.use('/api/auth', require('./routes/user_routes'));
 
 app.listen(PORT,()=>{
